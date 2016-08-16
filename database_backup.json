@@ -1,0 +1,85 @@
+	{
+		"version": "1.0.0.1",
+		"title": "Курсы обмена валют",
+		"last-modified": "1449150560590",
+		"currencies":[
+			{
+				"title": "Доллар США",
+				"code": "usd",
+				"icon": "us",
+				"price_purchase": "60.24",
+				"price_sale": "61.24",
+				"special_price":
+					[
+						{
+							"title": "до 100",
+							"price_purchase": "29.24",
+							"price_sale": "19.24"
+						},
+						{
+							"title": "от 100 до 1000",
+							"price_purchase": "39.24",
+							"price_sale": "77.24"
+						},
+						{
+							"title": "от 1000",
+							"price_purchase": "7.24",
+							"price_sale": "8.24"
+						}
+					]
+				
+			},
+			{
+				"title": "Евро",
+				"code": "eur",
+				"icon": "eu",
+				"price_purchase": "70.02",
+				"price_sale": "61.24",
+				"special_price":
+					[
+						{
+							"title": "до 500",
+							"price_purchase": "129.24",
+							"price_sale": "19.24"
+						},
+						{
+							"title": "от 100 до 1000",
+							"price_purchase": "29.24",
+							"price_sale": "59.24"
+						},
+						{
+							"title": "от 500",
+							"price_purchase": "9.24",
+							"price_sale": "33.24"
+						}
+					]
+				
+			},
+			{
+				"title": "Австралийский доллар",
+				"code": "aud",
+				"icon": "au",
+				"price_purchase": "20.24",
+				"price_sale": "21.24",
+				"special_price":
+					[]
+				
+			},
+			{
+				"title": "Японская иена",
+				"code": "jpy",
+				"icon": "jp",
+				"price_purchase": "2.24",
+				"price_sale": "1.91",
+				"special_price": []				
+			},
+			{
+				"title": "Китайский юань",
+				"code": "chi",
+				"icon": "cn",
+				"price_purchase": "232.24",
+				"price_sale": "517.24",
+				"special_price": []				
+			}
+		]
+	}

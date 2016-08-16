@@ -1,0 +1,72 @@
+
+
+		<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active" ><a href="#home" aria-controls="home" data-toggle="pill">Курсы валют</a></li>
+				<li role="presentation" ><a href="#settings" aria-controls="settings" data-toggle="pill">Настройки</a></li>
+		</ul>
+
+		<div class="panel-body">
+			<div class="tab-content">
+			  <div role="tabpanel" class="tab-pane fade in active" id="home" >
+				<a href="#/currency-detail" class="btn btn-primary" role="button">Создать</a>
+				<br><br>
+				<table class="table" >
+				  <tr><th width="35%">Название</th><th>Код</th><th>Сорт.</th><th>Активность</th><th>Покупка</th><th>Продажа</th><th>Спец. объемы</th><th>Действия</th></tr>
+				  <tr ng-repeat="currency in dataDB.currencies">
+						<td><img ng-src="../img/flags/{{currency.icon}}.png" height="30"></img> {{currency.title}}</td>
+						<td>{{currency.code | uppercase}}</td>
+						<td align=center>{{currency.sort}}</td>
+						<td align=center>
+							<span ng-show="currency.active == '1'">Да</span>
+							<span ng-hide="currency.active == '1'">Нет</span>
+						</td> 
+						<td>{{currency.price_purchase}}</td>
+						<td>{{currency.price_sale}}</td>
+						<td>
+							<div class="special_price" ng-show="currency.special_price.length">
+								<div ng-repeat="spec in currency.special_price">
+									<table><td class="spec_title">{{spec.title}}</td><td>{{spec.price_purchase}}</td><td>&nbsp;{{spec.price_sale}}</td></table>
+								</div> 
+							</div> 
+						</td>
+						<td class="action_column"><a href="#/currency-detail/{{currency.id}}/"><span class="glyphicon glyphicon-pencil"></span></a> <span class="glyphicon glyphicon-remove" ng-click="removeCurrency(currency.id);"></span></td>
+					</tr>
+				</table>
+			  </div>
+			  <div role="tabpanel" class="tab-pane fade" id="settings">
+				
+				<form class="form-horizontal">
+				  <div class="form-group">
+					<label for="inputEmail3" class="col-sm-2 control-label">Заголовок приложения</label>
+					<div class="col-sm-10">
+					  <input type="text" class="form-control" id="title" placeholder="Заголовок" ng-model="dataDB.app_title">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label for="inputEmail3" class="col-sm-2 control-label">Бегущая строка</label>
+					<div class="col-sm-10">
+					  <input type="text" class="form-control" id="app_running_string" placeholder="Заголовок" ng-model="dataDB.app_running_string">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label for="inputPassword3" class="col-sm-2 control-label">Версия приложения</label>
+					<div class="col-sm-10">
+					  <input type="text" class="form-control" id="version" placeholder="version" disabled ng-model="dataDB.app_version">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label for="inputPassword3" class="col-sm-2 control-label">Дата последних изменений</label>
+					<div class="col-sm-10">
+					  <input type="text" class="form-control" id="version" placeholder="last-modified" disabled ng-model="dataDB.app_last_modified">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+					  <button ng-click="saveSettings();" class="btn btn-primary">Сохранить</button>
+					</div>
+				  </div>
+				</form>
+				
+			  </div>
+			</div>
+		</div>

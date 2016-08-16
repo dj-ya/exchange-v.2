@@ -1,0 +1,36 @@
+.spec_title
+{
+	font-size:11px;
+	padding-right:14px;
+}
+
+.form-inline .form-group
+{
+	margin-bottom:15px !important;
+}
+
+.action_column span
+{
+	cursor: pointer;
+	font-size: 25px; 
+}
+
+.flags 
+{
+	float: left;
+	margin: 3px;
+	text-align:center;
+	border: 1px dotted #ddd;
+}
+.flags img
+{
+	width:48px;
+	cursor: pointer;
+}
+
+.flags_conteiner 
+{
+	height: 150px;
+	overflow: auto;
+	margin: 5px 0px;
+}

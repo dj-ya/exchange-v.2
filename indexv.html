@@ -1,0 +1,58 @@
+<!doctype html>
+<html ng-app="exchangeApp">
+  <head>
+	<meta charset="utf-8">
+    <script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/services.js"></script>
+	<link href="css/main.css" rel="stylesheet">
+  </head>
+  <body class="body1080_1920" ng-controller="appCtrl">
+  
+	<div class="header" >
+		<div class="logo"></div>
+		<div class="title">{{dataDB.app_title}}</div>
+		<div class="datetime"><span>{{date | date:'HH:mm'}}</span></br>{{date | date:'dd.MM.yyyy'}}</div>
+	</div>
+	<br clear=all>
+	<div class="currencies" >
+		<table>
+			<tr>
+				<th></th>
+				<th></th>
+				<th>Покупка</th>
+				<th>Продажа</th>
+			</tr>
+			<tr class="currencies_items" ng-repeat="currency in dataDB.currencies | filter: {active:'1'} | limitTo:8">
+				<td class="icon"><img ng-src="img/flags/{{currency.icon}}.png" /></td>
+				<td class="currency_title">{{currency.title}} </td>
+				<td class="purchase">
+					<div ng-hide="currency.special_price.length">
+						{{currency.price_purchase}} 
+					</div>
+					<div class="special_price" ng-show="currency.special_price.length">
+						<div ng-repeat="spec in currency.special_price">
+							<table><td class="spec_title">{{spec.title}}</td><td>{{spec.price_purchase}}</td></table></div> 
+						</div> 
+				</td>
+				<td class="sale">
+					<div ng-hide="currency.special_price.length">
+						{{currency.price_sale}} 
+					</div>
+					<div class="special_price" ng-show="currency.special_price.length">
+						<div ng-repeat="spec in currency.special_price">
+							<table><td class="spec_title">{{spec.title}}</td><td>{{spec.price_sale}}</td></table></div> 
+					</div> 
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	<marquee class="running_string" behavior="scroll" direction="left" >
+		{{dataDB.app_running_string}}
+	</marquee>
+	
+  </body>
+</html>

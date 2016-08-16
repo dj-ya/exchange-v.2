@@ -1,0 +1,98 @@
+<div class="panel-body" >
+	<form >
+		<fieldset class="form-horizontal">	
+			<legend>Главные настройки</legend>
+			<div class="form-group">
+				<label for="title" class="col-sm-2 control-label">Название</label>
+				<div class="col-sm-10">
+				  <input type="text" class="form-control" id="title" placeholder="Название" ng-model="title">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Код валюты</label>
+				<div class="col-sm-10">
+				  <input type="text" class="form-control" id="code" placeholder="Код валюты" ng-model="code">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Активность</label>
+					<div class="col-sm-10">
+						<input type="checkbox" ng-model="active" ng-true-value="'1'" ng-false-value="'0'">
+				  </div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Название файла иконки</label>
+				<div class="col-sm-10">
+				  <input type="text" class="form-control" id="icon" placeholder="Название файла иконки без расширения" ng-model="icon" readonly>
+				</div>
+				<div class="col-sm-10 flags_conteiner" >
+					<div class="flags" ng-repeat="flag in flags_array">
+						{{flag.file_name}}<br>
+						<img ng-src="{{flag.url}}" ng-click="setFlag(flag.url);" title="{{flag.file_name}}"/>
+					</div>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Индекс сортировки</label>
+				<div class="col-sm-10">
+				  <input type="number" min="1" max="100" class="form-control" id="sort" placeholder="Индекс сортировки" ng-model="sort">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Цена покупки</label>
+				<div class="col-sm-10">
+				  <input type="text" class="form-control" id="price_purchase" placeholder="Цена покупки" ng-model="price_purchase">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Цена продажи</label>
+				<div class="col-sm-10">
+				  <input type="text" class="form-control" id="price_sale" placeholder="Цена продажи" ng-model="price_sale">
+				</div>
+			  </div>
+		</fieldset>
+		<fieldset class="form-inline">
+		<legend>Специальные цены</legend>
+			<div class="form-group">
+				<label for="title1">Название</label>
+				<input type="text" class="form-control" id="title1" ng-model="special_price.title1" placeholder="до 1000">
+			  </div>
+			  <div class="form-group">
+				<label for="price_purchase1">Цена покупки</label>
+				<input type="text" class="form-control" id="price_purchase1" ng-model="special_price.price_purchase1" placeholder="">
+			  </div>
+			  <div class="form-group">
+				<label for="price_sale1">Цена покупки</label>
+				<input type="text" class="form-control" id="price_sale1" ng-model="special_price.price_sale1" placeholder="">
+			  </div>
+			  
+			  <div class="form-group">
+				<label for="title2">Название</label>
+				<input type="text" class="form-control" id="title2" ng-model="special_price.title2" placeholder="до 1000">
+			  </div>
+			  <div class="form-group">
+				<label for="price_purchase2">Цена покупки</label>
+				<input type="text" class="form-control" id="price_purchase2" ng-model="special_price.price_purchase2" placeholder="">
+			  </div>
+			  <div class="form-group">
+				<label for="price_sale2">Цена покупки</label>
+				<input type="text" class="form-control" id="price_sale2" ng-model="special_price.price_sale2" placeholder="">
+			  </div>
+			  
+			  <div class="form-group">
+				<label for="title3">Название</label>
+				<input type="text" class="form-control" id="title3" ng-model="special_price.title3" placeholder="до 1000">
+			  </div>
+			  <div class="form-group">
+				<label for="price_purchase3">Цена покупки</label>
+				<input type="text" class="form-control" id="price_purchase3" ng-model="special_price.price_purchase3" placeholder="">
+			  </div>
+			  <div class="form-group">
+				<label for="price_sale3">Цена покупки</label>
+				<input type="text" class="form-control" id="price_sale3" ng-model="special_price.price_sale3" placeholder="">
+			  </div>
+		</fieldset>		
+		<button ng-click="saveCurrency();" class="btn btn-primary">Сохранить</button>
+		<a href="#/" class="btn btn-warning" role="button">Назад</a>
+	</form>
+</div>

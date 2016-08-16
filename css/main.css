@@ -1,0 +1,189 @@
+html
+{
+	margin:0px;
+	padding:0px;
+}
+
+.body1920_1080
+{	
+	background: url(../img/background.jpg);
+	min-width:1920px;
+	min-height:1080px;
+	overflow:hidden;
+	font-family: "Helvetica";
+	margin:0px;
+	padding:0px;
+	/* color:#45b528; */
+}
+
+.body1920_1080 .header div, .body1080_1920 .header div
+{
+	float:left;
+	height: 110px;
+}
+
+.body1920_1080 .logo, .body1080_1920 .logo{
+	background: url(../img/logo.png) no-repeat center;
+	width: 500px;
+	height:110px;
+	padding:10px;
+}
+
+.body1920_1080 .title
+{
+	width: 1000px;
+	font-size: 80px;
+	text-align:center;
+	padding-top:15px;
+}
+
+
+.body1920_1080 .datetime, .body1080_1920 .datetime
+{
+	width: 400px;
+	font-size: 40px;
+	text-align:center;
+}
+
+.body1920_1080 .datetime span, .body1080_1920 .datetime span
+{
+	font-size: 70px;
+	height:10px;
+}
+
+
+.body1920_1080 .purchase, .body1920_1080 .sale
+{
+	width: 280px;
+	
+}
+
+/*****Стили для верикалки****/
+
+.body1080_1920
+{	
+	background: url(../img/background_vert.jpg);
+	min-width:1080px;
+	min-height:1920px;
+	overflow:hidden;
+	font-family: "Helvetica";
+	margin:0px;
+	padding:0px; 
+	/* color:#45b528; */
+}
+
+.body1080_1920 .title
+{
+	display:none;
+}
+.body1080_1920 .datetime
+{
+	margin-left: 120px;
+}
+
+.body1080_1920  .currency_title
+{
+	text-align:left;
+	font-size:44px !important;
+}
+
+.body1080_1920 .currencies .icon
+{
+	width:100px;
+}
+
+.body1080_1920 .currencies table td
+{
+	font-size:52px;
+}
+/*****Конец Стили для верикалки****/
+
+.currencies{
+	margin-top: 50px;
+}
+
+
+.currencies table
+{
+	width:100%;
+}
+
+.currencies table td
+{
+	text-align:center;
+	font-size:60px;
+	padding:2px 20px;
+}
+
+.body1920_1080  .currency_title
+{
+	text-align:left !important;
+	font-size: 70px !important;
+}
+.currencies th
+{
+	font-size:20px;
+	color:#666;
+}
+
+.currencies .icon
+{
+	width:168px;
+}
+
+.currencies .currencies_items  {
+	width: 1920px;
+	height:190px;
+	background: rgba(230, 230, 230, 0.5);
+	border-top: 2px solid green;
+	
+}
+
+.currencies_header
+{
+	font-size: 30px !important;
+	background: #154679 !important;
+	color: #e5f7fd !important;
+}
+
+.currencies span 
+{
+	font-size:32px;
+}
+
+.special_price
+{
+	font-size:60px;	
+}
+
+.special_price table td
+{
+	padding: 3px;
+	text-align:left;
+	line-height:86%;
+}
+.special_price .spec_title
+{
+	width:80px;
+	font-size:20px !important;	
+	text-align:right;
+	color:#666;
+
+	
+}
+
+.purchase, .sale
+{
+	width:225px;
+}
+
+.running_string
+{
+	font-size: 50px;
+	margin: 5px 1px;
+	bottom: 10px;
+	position: absolute;
+}
+
+
+div{ /* border:1px solid grey;  */}
