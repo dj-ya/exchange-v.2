@@ -5,7 +5,7 @@ html
 }
 
 .body1920_1080
-{	
+{
 	background: url(../img/background.jpg);
 	min-width:1920px;
 	min-height:1080px;
@@ -22,11 +22,15 @@ html
 	height: 110px;
 }
 
-.body1920_1080 .logo, .body1080_1920 .logo{
+.body1920_1080 .logo{
 	background: url(../img/logo.png) no-repeat center;
 	width: 500px;
 	height:110px;
 	padding:10px;
+}
+
+.body1080_1920 .logo{
+	width: 300px;
 }
 
 .body1920_1080 .title
@@ -38,7 +42,7 @@ html
 }
 
 
-.body1920_1080 .datetime, .body1080_1920 .datetime
+.body1920_1080 .datetime
 {
 	width: 400px;
 	font-size: 40px;
@@ -55,51 +59,60 @@ html
 .body1920_1080 .purchase, .body1920_1080 .sale
 {
 	width: 280px;
-	
+
 }
 
 /*****Стили для верикалки****/
 
 .body1080_1920
-{	
+{
 	background: url(../img/background_vert.jpg);
 	min-width:1080px;
 	min-height:1920px;
 	overflow:hidden;
 	font-family: "Helvetica";
 	margin:0px;
-	padding:0px; 
+	padding:10px 0px;
 	/* color:#45b528; */
 }
 
 .body1080_1920 .title
 {
-	display:none;
+	font-size: 44px;
+	line-height: 74px;
+	text-align: center;
 }
 .body1080_1920 .datetime
 {
-	margin-left: 120px;
+	font-size: 28px;
+	text-align: center;
 }
 
 .body1080_1920  .currency_title
 {
 	text-align:left;
-	font-size:44px !important;
+	font-size:48px !important;
 }
 
 .body1080_1920 .currencies .icon
 {
-	width:100px;
+	width:80px;
 }
 
 .body1080_1920 .currencies table td
 {
-	font-size:52px;
+	font-size:50px;
+	background-color: rgba(255, 255, 250, 0.4);
+}
+
+.body1080_1920 .header_div{
+	padding:40px 1px;
 }
 /*****Конец Стили для верикалки****/
 
 .currencies{
 	margin-top: 50px;
+	padding:0px !important;
 }
 
 
@@ -136,7 +149,7 @@ html
 	height:190px;
 	background: rgba(230, 230, 230, 0.5);
 	border-top: 2px solid green;
-	
+
 }
 
 .currencies_header
@@ -146,14 +159,14 @@ html
 	color: #e5f7fd !important;
 }
 
-.currencies span 
+.currencies span
 {
 	font-size:32px;
 }
 
 .special_price
 {
-	font-size:60px;	
+	font-size:60px;
 }
 
 .special_price table td
@@ -165,11 +178,11 @@ html
 .special_price .spec_title
 {
 	width:80px;
-	font-size:20px !important;	
+	font-size:20px !important;
 	text-align:right;
 	color:#666;
 
-	
+
 }
 
 .purchase, .sale
@@ -187,3 +200,13 @@ html
 
 
 div{ /* border:1px solid grey;  */}
+
+
+#error {display: none;}
+
+.running_string
+{
+	position: fixed;
+	bottom: 30px;
+	font-size: 40px;
+}
