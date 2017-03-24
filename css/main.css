@@ -108,6 +108,11 @@ html
 .body1080_1920 .header_div{
 	padding:40px 1px;
 }
+
+.body1080_1920 .currencies table{
+border-spacing: 1px;
+border-collapse:inherit;
+}
 /*****Конец Стили для верикалки****/
 
 .currencies{
