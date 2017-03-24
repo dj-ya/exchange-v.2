@@ -122,7 +122,7 @@ var App = React.createClass(
 	render: function(){
 		return (
 			<div>
-        <Header logo_src="../img/logo.png" />
+        <Header logo_src="img/logo.png" />
 				<Rates />
 			</div>
 		);
